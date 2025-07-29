@@ -23,170 +23,139 @@
   background-color: #555;
   color: #fff;
   padding: 12px 35px;
-  color: #fff;
   border-radius: 8px;
   text-decoration: none;
   font-size: 0.8rem;
+  transition: background 0.3s;
 }
 
 #menu a:hover {
   background-color: #999;
 }
 
-.container {
+/* NÃO ALTERE DAQUI PRA CIMA */
+/* ESCREVA SEU CÓDIGO ABAIXO */
+
+.layout01 {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.header, .footer {
-  background: #666;
-  color: white;
+.layout01 .cabecalho {
   padding: 20px;
-  font-weight: bold;
-  font-size: 1.5rem;
+  text-align: left;
+  background-color: #1210b4;
+  color: white;
 }
 
-.main {
-  flex: 1;
+.layout01 .rodape {
+  padding: 20px;
+  text-align: left;
+  background-color: #2613cf; 
+  color: white;
+}
+
+.layout01 .meio {
   display: flex;
+  gap: 10px;
 }
 
-.menu {
-  flex: 1;
-  background: #aaa;
-  padding: 15px;
-}
-
-.menu button {
-  display: block;
-  margin: 8px 0;
-  padding: 8px 12px;
-  border: none;
-  background: #ccc;
-  cursor: pointer;
-}
-
-.menu h2 {
-  margin-bottom: 10px;
-}
-
-.content {
+.layout01 .coluna-artigos {
+  display: flex;
+  flex-direction: column;
   flex: 2;
-  background: #bbb;
-  padding: 15px;
+  gap: 10px;
 }
 
-.ads {
+.layout01 .artigo {
+  padding: 20px;
+  background-color: #ecf0f1; 
+}
+
+.layout01 .menu-lateral {
+  padding: 20px;
+  background-color: #ecf0f1; 
   flex: 1;
-  background: #ccc;
-  padding: 15px;
 }
 
-.ads h2 {
-  margin-bottom: 10px;
-}
-
-
-/* Layout 02 - 02.html */
 .layout02 {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.top-menu {
-  display: flex;
-  justify-content: space-around;
-  background: #666;
-  padding: 15px;
-}
-
-.top-menu button {
-  background: #999;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background: #eee;
-  flex: 1;
-}
-
-.card {
-  background: #aaa;
-  width: 30%;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.footer02 {
-  display: flex;
-  justify-content: space-around;
-  background: #666;
-  padding: 20px;
-  color: white;
-}
-
-
-/* Layout 03 - 03.html */
-.layout03 {
+.tabuleiro {
   display: grid;
-  grid-template-areas:
-    "cabecalho cabecalho menu"
-    "artigo1    artigo2    menu"
-    "rodape     rodape     rodape";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  gap: 10px;
-  height: 100vh;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 0;
 }
 
-.cabecalho {
-  grid-area: cabecalho;
-  background: #bbb;
+.bloco {
+  width: 60px;
+  height: 60px;
+}
+
+.bloco:nth-child(odd) {
+  background-color: #000;
+}
+
+.bloco:nth-child(even) {
+  background-color: #fff;
+}
+
+.layout03 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.layout03 .header {
   padding: 20px;
   font-weight: bold;
-}
-
-.menu {
-  grid-area: menu;
-  background: #777;
-  padding: 20px;
   color: white;
+  background-color: #2a1ed8;
 }
 
-.artigos {
-  display: contents;
-}
-
-.artigo:nth-child(1) {
-  grid-area: artigo1;
-  background: #aaa;
+.layout03 .footer {
   padding: 20px;
-}
-
-.artigo:nth-child(2) {
-  grid-area: artigo2;
-  background: #999;
-  padding: 20px;
-}
-
-.rodape {
-  grid-area: rodape;
-  background: #666;
+  font-weight: bold;
   color: white;
+  background-color: #101bbb;
+}
+
+.layout03 .conteudo {
+  display: flex;
+  gap: 10px;
+}
+
+.layout03 .menu {
   padding: 20px;
-  text-align: center;
+  flex: 1;
+  background-color: #ecf0f1; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.layout03 .menu button {
+  background: #bdc3c7;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.layout03 .main {
+  padding: 20px;
+  flex: 3;
+  background-color: #ecf0f1; 
+}
+
+.layout03 .ads {
+  padding: 20px;
+  flex: 1;
+  background-color: #ecf0f1;
 }
